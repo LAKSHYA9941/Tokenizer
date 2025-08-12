@@ -27,7 +27,7 @@ function App() {
 
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-gray-100 transition-colors overflow-y-hidden">
+    <div className="min-h-screen flex flex-col bg-slate-900 text-gray-900 dark:text-gray-100 transition-colors overflow-y-hidden">
       {/* Header */}
       <header className="w-full py-5 bg-gradient-to-r from-indigo-500 to-purple-600 shadow-md">
         <h1 className="text-3xl md:text-4xl font-bold text-center text-white">
@@ -44,12 +44,12 @@ function App() {
             <label className="block mb-2 font-semibold">Input Text</label>
             <textarea
               rows={4}
-              className="w-full p-3 rounded-md border border-gray-300 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-indigo-500 outline-none"
+              className="w-full p-3 rounded-md border border-slate-700  bg-slate-800 focus:ring-2 focus:ring-indigo-500 outline-none"
               placeholder="Type something..."
               value={text}
               onChange={(e) => setText(e.target.value)}
             />
-            <div className="text-sm text-right text-gray-500 dark:text-gray-400 mt-1">
+            <div className="text-sm text-right text-gray-400 mt-1">
               {text.length} characters
             </div>
           </div>
@@ -73,7 +73,7 @@ function App() {
             <textarea
               rows={4}
               readOnly
-              className="w-full p-3 rounded-md border border-gray-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-800"
+              className="w-full p-3 rounded-md border border-slate-700 bg-slate-800"
               value={tokens.join(' ')}
             />
           </div>
@@ -81,7 +81,7 @@ function App() {
           {/* Decoded Preview */}
           <div>
             <label className="block mb-2 font-semibold">Decoded Preview</label>
-            <div className="p-3 rounded-md border border-gray-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-800 font-mono break-all">
+            <div className="p-3 rounded-md border border-slate-700 bg-slate-800 font-mono break-all">
               {decoded || (
                 <span className="text-gray-400">Decode result appears here…</span>
               )}
@@ -90,7 +90,7 @@ function App() {
 
           {/* Missing chars warning */}
           {tokens.includes('0') && (
-            <div className="flex items-center gap-2 text-yellow-600 dark:text-yellow-400">
+            <div className="flex items-center gap-2 text-yellow-400">
               <span role="img" aria-label="warning">
                 ⚠️
               </span>{' '}
@@ -103,18 +103,5 @@ function App() {
   );
 }
 
-// Small reusable button style
-const btnBase =
-  'px-4 py-2 rounded-md text-white font-medium transition hover:opacity-90';
-function btn({ children, className = '', ...props }) {
-  return (
-    <button
-      className={`${btnBase} bg-indigo-500 ${className}`}
-      {...props}
-    >
-      {children}
-    </button>
-  );
-}
 
 export default App;
