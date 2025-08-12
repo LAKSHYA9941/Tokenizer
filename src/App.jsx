@@ -27,11 +27,13 @@ function App() {
 
 
   return (
-    <div className="min-h-full flex flex-col bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-gray-100 transition-colors overflow-y-hidden">
+    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-gray-100 transition-colors overflow-y-hidden">
       {/* Header */}
       <header className="w-full py-5 bg-gradient-to-r from-indigo-500 to-purple-600 shadow-md">
         <h1 className="text-3xl md:text-4xl font-bold text-center text-white">
-          Tokenizer Playground
+          Learnt React & JavaScript from{' '}
+          <strong>Hitesh Sir – Pranam Guru ji</strong>
+
         </h1>
       </header>
 
@@ -97,12 +99,6 @@ function App() {
           )}
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="text-center py-4 bg-gray-200 dark:bg-slate-800 text-sm">
-        Learnt React & JavaScript from{' '}
-        <strong>Hitesh Sir – Pranam Guru ji</strong>
-      </footer>
     </div>
   );
 }
